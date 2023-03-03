@@ -16,10 +16,6 @@
 </head>
 
 <body>
-	<!---
-    HTML/CSS implementation of HipChat redesign
-    Source: https://codepen.io/CucuIonel/pen/HzLtC
-    -->
 	<div class="window-wrapper">
 		<div class="window-title">
 			<div class="dots">
@@ -62,10 +58,14 @@
 			<div class="chat-area">
 				<div class="title"><b>Conversation title</b><i class="fa fa-search"></i></div>
 				<div class="chat-list">
-					<ul>
-						<li class="me">
+					<div>
+						<span>Number of messages : </span>
+						<span class="numberOfMessages"></span>
+					</div>
+					<ul class="messages">
+						<li class="me" id="template">
 							<div class="name">
-								<span class="">John Doe</span>
+								<span>John Doe</span>
 							</div>
 							<div class="message">
 								<p>Hello</p>
@@ -85,10 +85,10 @@
 				</div>
 				<div class="input-area">
 					<div class="input-wrapper">
-						<input type="text" value="" placeholder="Message here">
+						<input type="text" value="" placeholder="Message here" class="input">
 						<i class="fa fa-smile-o"></i>
 					</div>
-					<input type="button" value="Submit" class="send-btn">
+					<input type="button" id="send-message-button" value="Submit" class="sendButton">
 				</div>
 			</div>
 			<div class="right-tabs">
